@@ -26,3 +26,8 @@ ffmpeg -i Converter_Xima_Videos\Xima.mp4 -c:v libvpx -crf 10 -b:v 1M -c:a libvor
 ## Convert MP4 to Ogg/Ogv
 
 ffmpeg -i Converter_Xima_Videos\Xima.mp4 -codec:v libtheora -qscale:v 6 -codec:a libvorbis -qscale:a 6 Converter_Xima_Videos\Xima.ogg
+
+
+# PowerShell Windows Prompt
+
+ get-childitem | ForEach-Object { Move-Item -LiteralPath $_.name $_.name.Replace("(1)","")}
